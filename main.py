@@ -1,10 +1,10 @@
-# Tutorial 4
+# First Python Program
 
 print("Hello World", 5)
 print(5)
 print(9*80)
 
-# Tutorial 5
+# Comments, Excape Sequences & Print Statemennt
 
 """
 Hey guys, this is a way to comment `Multi-Lines`
@@ -20,7 +20,7 @@ print("Hello World !!!") # Printing Hello World!
 print("Hello", 4,5,6, sep="/", end="=")
 print("Alqama")
 
-# Tutorial 6
+# Variables & Data Types
 
 a = True
 b = complex(6 , 5)
@@ -49,9 +49,7 @@ print(tuple1)
 dict1 = {"name": "Alqama", "age": 18, "canVote": True}
 print(dict1)
 
-# Tutorial 8 - Exercise: Calculator
-
-# Operators
+# Operators & Exercise: Calculator
 
 print(5+7) # Addition
 print(15-7) # Subtraction
@@ -72,3 +70,26 @@ print("The value of", "'", a, "*", b, "'", "is:", a * b)
 print("The value of", "'", a, "/", b, "'", "is:", a / b)
 print("The value of", "'", a, "//", b, "'", "is:", a // b)
 print("The value of", "'", a, "%", b, "'", "is:", a % b)
+
+
+# TypeCasting
+
+a = "1"
+# a = 1
+b = "2"
+# b = 2
+
+print(int(a) + int(b))
+
+# Explicit TypeCasting
+string = "15"
+number = 7
+string_number = int(string) #throws an error if the string is not a valid integer
+sum= number + string_number
+print("The Sum of both the numbers is: ", sum)
+
+# Implicit TypeCasting
+c = 1.8
+d = 7
+
+print(c + d)
