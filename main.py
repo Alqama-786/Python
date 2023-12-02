@@ -1,8 +1,8 @@
 # Tutorial 4
 
-# print("Hello World", 5)
-# print(5)
-# print(9*80)
+print("Hello World", 5)
+print(5)
+print(9*80)
 
 # Tutorial 5
 
@@ -10,15 +10,15 @@
 Hey guys, this is a way to comment `Multi-Lines`
 Author: Alqama
 """
-# print("Hey guys I am \"Alqama\"\nand I am learning python")
+print("Hey guys I am \"Alqama\"\nand I am learning python")
 
-# print("Hello World")
-# # This is a 'Single-Line Comment'
-# print("This is a print statement.")
-# print("Hello World !!!") # Printing Hello World!
+print("Hello World")
+# This is a 'Single-Line Comment'
+print("This is a print statement.")
+print("Hello World !!!") # Printing Hello World!
 
-# print("Hello", 4,5,6, sep="/", end="=")
-# print("Alqama")
+print("Hello", 4,5,6, sep="/", end="=")
+print("Alqama")
 
 # Tutorial 6
 
@@ -33,7 +33,7 @@ print(number)
 print(name)
 print(number + number1)
 
-# Check the type of a variable
+# # Check the type of a variable
 print("The type of Name is:", type(name))
 print("The type of Number is:", type(number))
 print("The type of Number is:", type(number2))
@@ -49,7 +49,7 @@ print(tuple1)
 dict1 = {"name": "Alqama", "age": 18, "canVote": True}
 print(dict1)
 
-# Tutorial 7 - Exercise 1: Calculator
+# Tutorial 8 - Exercise: Calculator
 
 # Operators
 
@@ -60,3 +60,15 @@ print(2**4) # Exponential
 print(15/7) # Division
 print(15//7) # Floor Division
 print(15%7) # Modulus
+
+# Exercise
+
+a = 5
+b = 2
+
+print("The value of", "'", a, "+", b, "'", "is:", a + b)
+print("The value of", "'", a, "-", b, "'", "is:", a - b)
+print("The value of", "'", a, "*", b, "'", "is:", a * b)
+print("The value of", "'", a, "/", b, "'", "is:", a / b)
+print("The value of", "'", a, "//", b, "'", "is:", a // b)
+print("The value of", "'", a, "%", b, "'", "is:", a % b)
