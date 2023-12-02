@@ -93,3 +93,13 @@ c = 1.8
 d = 7
 
 print(c + d)
+
+# User Input
+
+a = str(input("Please enter your name: "))
+print("Hi, Nice to meet you", a)
+
+x = int(input("Enter you number: "))
+y = int(input("Enter you second number: "))
+print(x+y)
+print(int(x)+int(y))
