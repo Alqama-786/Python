@@ -5,7 +5,7 @@ randomLetters = "abcdefghijklmnopqrtuvwxyz"
 
 def coding(name: str):
     randomThreeLetters = ""
-    if len(name) <= 3:
+    if len(name) >= 3:
         for _ in range(3):
             randomIdx = random.randint(0, len(randomLetters) - 1)
             randomThreeLetters += randomLetters[randomIdx]
@@ -16,7 +16,7 @@ def coding(name: str):
 
 
 def decoding(secretCode: str):
-    if len(name) <= 3:
+    if len(name) >= 3:
         secretCode = secretCode[3:-3]
         secretCode = secretCode[-1:] + secretCode[:-1]
     else:

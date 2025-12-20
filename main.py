@@ -1,4 +1,13 @@
-# First Python Program (Print Statemennt)
+# Import Methods and DIR function
+import os
+import math # To use all the math.etc functions and variables.
+# from math import sqrt, floor # Importing specific math functions and variables.
+# import math as m # Rename while importing a package.
+# from math import * # Importing all functions and variables from math package.
+
+print(dir(math)) # To see all the Math package functions and variables.
+
+# Print Statemennts
 
 print("Hello World")
 print(5)
@@ -415,3 +424,33 @@ marks = [12,23,35,67,99,24,47,89,19]
 
 for index, mark in enumerate(marks): # Index will hold the index and mark will hold the value at that index.
     print(f"Alqama has great marks, Which is: {mark}.") if index == 4 else print(mark)
+
+# OS Module
+def dirExists(path):
+    return os.path.exists(path)
+
+os.makedirs("data", exist_ok=dirExists("data"))
+
+for i in range(20):
+    # os.makedirs(f"data/day-{i+1}-of-code", exist_ok=dirExists(f"data/day-{i+1}-of-code"))
+    # os.rename(f"data/day-{i+1}-of-code", f"data/Day {i+1} of Code")
+    os.makedirs(f"data/Day {i+1} of Code", exist_ok=dirExists(f"data/Day {i+1} of Code"))
+
+folders = os.listdir("data")
+# print(folders)
+
+for folder in folders:
+    print(f"The {folder} folder has: {os.listdir(f"data/{folder}")} files.")
+
+print(os.getcwd())
+
+# Local vs Global Variables
+x = 5 # Global
+
+def variables():
+    global x # Like this we can change a global variable inside function.
+    x = 10
+    z = 10 # Local
+    print(x,z) # Output: 10, 10, also x is not a local variable here it is global and we are changing it.
+
+variables()
