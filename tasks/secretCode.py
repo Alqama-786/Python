@@ -1,29 +1,42 @@
 import random
+import inquirer
 
-name = input("Enter your name: ")
+message = input("Enter your message: ")
+question = inquirer.prompt([inquirer.List('operation', message="What operation you wanted to do?", choices=["Coding","Decoding"])])
+operation = question["operation"]
 randomLetters = "abcdefghijklmnopqrtuvwxyz"
 
-def coding(name: str):
+def coding(message: str):
     randomThreeLetters = ""
-    if len(name) >= 3:
+    if len(message) >= 3:
         for _ in range(3):
             randomIdx = random.randint(0, len(randomLetters) - 1)
             randomThreeLetters += randomLetters[randomIdx]
-        name = f"{randomThreeLetters}{name[1:] + name[0]}{randomThreeLetters}"
+
+        message = f"{randomThreeLetters}{message}{randomThreeLetters}"
     else:
-        name = name[::-1]
-    return name
+        for _ in range(10):
+            randomIdx = random.randint(0, len(randomLetters) - 1)
+            randomThreeLetters += randomLetters[randomIdx]
+
+        message = f"{randomThreeLetters}{message}{randomThreeLetters}"
+    return message[::-1]
 
 
 def decoding(secretCode: str):
-    if len(name) >= 3:
+    if len(message) >= 3:
         secretCode = secretCode[3:-3]
-        secretCode = secretCode[-1:] + secretCode[:-1]
-    else:
         secretCode = secretCode[::-1]
+        secretCode = secretCode[-1] + secretCode[:-1]
+    else:
+        secretCode = secretCode[10:-10]
+        secretCode = secretCode[::-1]
+        secretCode = secretCode[-1] + secretCode[:-1]
     return secretCode
 
-secretCode = coding(name)
-decode = decoding(secretCode)
-print(secretCode)
-print(decode)
+if operation.rstrip().lower() == "coding":
+    print(f"Coded: {coding(message)}")
+elif operation.rstrip().lower() == "decoding":
+    print(f"Decoded: {decoding(message)}")
+else:
+    raise ValueError("Please enter a valid operation.")
