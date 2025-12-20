@@ -409,3 +409,9 @@ print(a) if a > b else print (b) if a == b else print("B")
 
 c = 9 if a > b else 0
 print(c)
+
+# Enumerate Function
+marks = [12,23,35,67,99,24,47,89,19]
+
+for index, mark in enumerate(marks): # Index will hold the index and mark will hold the value at that index.
+    print(f"Alqama has great marks, Which is: {mark}.") if index == 4 else print(mark)
