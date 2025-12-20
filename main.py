@@ -401,3 +401,11 @@ elif num < 1 and num > 10:
     raise ValueError("The entered number should be between 1 - 10!")
 else:
     print("Not match.")
+
+# Short hand If else statements
+a = 300
+b = 500
+print(a) if a > b else print (b) if a == b else print("B")
+
+c = 9 if a > b else 0
+print(c)
