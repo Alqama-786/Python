@@ -505,3 +505,46 @@ with open("main.txt", "r") as f:
     print(f.tell())
     data = f.read() # Read 5 bytes from a file
     print(data)
+
+with open("main.txt", "w") as f:
+    f.write("Hello World!")
+    f.truncate(5)
+
+with open("main.txt", "r") as f:
+    print(f.read())
+
+# Lambda functions
+def plus(fx, value):
+  return 6 + fx(value)
+
+double = lambda x: x * 2
+cube = lambda x: x * x * x
+avg = lambda x, y, z: (x + y + z) / 3
+
+print(double(5))
+print(cube(5))
+print(avg(3, 5, 10))
+print(plus(lambda x: x * x , 2))
+
+# Map, Filter and Reduce
+l = [1, 2, 3, 5, 6, 7, 8, 9, 10]
+
+# Map
+newl = list(map(lambda n: n*n*n, l))
+print(newl)
+
+# Filter
+newl = list(filter(lambda n: n < 2, l))
+print(newl)
+
+# Reduce
+from functools import reduce
+newl = reduce(lambda n, n2: n + n2, l)
+print(newl)
+
+# 'is' vs '=='
+a = 4
+b = "4"
+
+print(a is b) # Compare exact location of object in memory
+print(a == b) # Compare values
