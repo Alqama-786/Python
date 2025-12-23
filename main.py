@@ -548,3 +548,31 @@ b = "4"
 
 print(a is b) # Compare exact location of object in memory
 print(a == b) # Compare values
+
+# Classes, Objects and Constructors: OOPs
+class Person:
+    name = "Alqama"
+    occupation = "Software Engineer"
+    networth = 10
+    info = lambda self: print(f"{self.name} is a {self.occupation}")
+
+a = Person()
+b = Person()
+
+b.name = "Alkma"
+b.occupation = "Frontend Developer"
+
+a.info()
+b.info()
+
+# Constructors:
+class Details:
+    def __init__(self, n, o):
+        print(self, n, o)
+        self.name = n
+        self.occ = o
+
+    info = lambda self: print(f"{self.name} is a {self.occ}")
+
+c = Details("Alqama", "AI Engineer")
+c.info()
